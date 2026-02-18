@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BarChart3, TrendingUp, MessageCircle, YouTube } from 'lucide-react';
+import { BarChart3, TrendingUp, MessageCircle, Play } from 'lucide-react';
 
 export default function AnalyticsDashboard() {
   const [companyName, setCompanyName] = useState('');
@@ -137,7 +137,7 @@ export default function AnalyticsDashboard() {
               <div className="flex items-center justify-between mb-4">
                 <h4 className="font-semibold text-gray-800">YouTube</h4>
                 <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
-                  <YouTube className="w-5 h-5 text-red-600" />
+                  <Play className="w-5 h-5 text-red-600 fill-current" />
                 </div>
               </div>
               <div className="space-y-2">
