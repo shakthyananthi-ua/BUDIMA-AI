@@ -57,6 +57,14 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        budima: {
+          "deep-blue": "hsl(var(--budima-deep-blue))",
+          indigo: "hsl(var(--budima-indigo))",
+          "light-blue": "hsl(var(--budima-light-blue))",
+          purple: "hsl(var(--budima-purple))",
+          "light-bg": "hsl(var(--budima-light-bg))",
+          "dark-bg": "hsl(var(--budima-dark-bg))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,10 +88,19 @@ export default {
             height: "0",
           },
         },
+        scroll: {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "100%": {
+            transform: "translateX(-100%)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        scroll: "scroll 20s linear infinite",
       },
     },
   },
