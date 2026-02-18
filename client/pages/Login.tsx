@@ -1,6 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { ArrowRight, Mail, Lock, Chrome } from 'lucide-react';
+import BudimaLogo from '@/components/BudimaLogo';
 
 export default function Login() {
   const navigate = useNavigate();
@@ -37,21 +38,26 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-budima-light-bg via-white to-blue-50 flex items-center justify-center px-4 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-md">
         {/* Logo */}
         <Link to="/" className="flex items-center justify-center space-x-2 mb-8 group">
-          <div className="w-10 h-10 bg-gradient-to-br from-budima-deep-blue to-budima-indigo rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-lg">B</span>
+          <BudimaLogo size="large" />
+          <div className="hidden sm:block">
+            <div className="font-bold text-2xl">
+              <span className="text-purple-600">Bu</span>
+              <span className="text-purple-600">Di</span>
+              <span className="text-purple-600">Ma</span>
+              <span className="text-blue-400 ml-1">AI</span>
+            </div>
           </div>
-          <span className="font-bold text-2xl text-budima-deep-blue">BUDIMA AI</span>
         </Link>
 
         {/* Card Container */}
         <div className="bg-white rounded-2xl border border-gray-200 shadow-xl p-8 sm:p-10">
           {/* Header */}
           <div className="mb-8">
-            <h1 className="text-3xl font-bold text-budima-deep-blue mb-2">
+            <h1 className="text-3xl font-bold text-purple-600 mb-2">
               {isSignUp ? 'Create Account' : 'Welcome Back'}
             </h1>
             <p className="text-gray-600">
@@ -66,7 +72,7 @@ export default function Login() {
             {/* Business Name (Sign Up Only) */}
             {isSignUp && (
               <div>
-                <label className="block text-sm font-semibold text-budima-deep-blue mb-2">
+                <label className="block text-sm font-semibold text-purple-600 mb-2">
                   Business Name
                 </label>
                 <input
@@ -75,7 +81,7 @@ export default function Login() {
                   value={formData.businessName}
                   onChange={handleChange}
                   placeholder="Your business name"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-budima-light-blue focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                   required={isSignUp}
                 />
               </div>
@@ -83,7 +89,7 @@ export default function Login() {
 
             {/* Email */}
             <div>
-              <label className="block text-sm font-semibold text-budima-deep-blue mb-2">
+              <label className="block text-sm font-semibold text-purple-600 mb-2">
                 Email Address
               </label>
               <div className="relative">
@@ -94,7 +100,7 @@ export default function Login() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="you@example.com"
-                  className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-budima-light-blue focus:border-transparent transition-all"
+                  className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                   required
                 />
               </div>
@@ -102,7 +108,7 @@ export default function Login() {
 
             {/* Password */}
             <div>
-              <label className="block text-sm font-semibold text-budima-deep-blue mb-2">
+              <label className="block text-sm font-semibold text-purple-600 mb-2">
                 Password
               </label>
               <div className="relative">
@@ -113,7 +119,7 @@ export default function Login() {
                   value={formData.password}
                   onChange={handleChange}
                   placeholder="••••••••"
-                  className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-budima-light-blue focus:border-transparent transition-all"
+                  className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                   required
                 />
               </div>
@@ -122,7 +128,7 @@ export default function Login() {
             {/* Confirm Password (Sign Up Only) */}
             {isSignUp && (
               <div>
-                <label className="block text-sm font-semibold text-budima-deep-blue mb-2">
+                <label className="block text-sm font-semibold text-purple-600 mb-2">
                   Confirm Password
                 </label>
                 <div className="relative">
@@ -133,7 +139,7 @@ export default function Login() {
                     value={formData.confirmPassword}
                     onChange={handleChange}
                     placeholder="••••••••"
-                    className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-budima-light-blue focus:border-transparent transition-all"
+                    className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                     required={isSignUp}
                   />
                 </div>
@@ -144,10 +150,10 @@ export default function Login() {
             {!isSignUp && (
               <div className="flex items-center justify-between">
                 <label className="flex items-center">
-                  <input type="checkbox" className="w-4 h-4 text-budima-light-blue rounded" />
+                  <input type="checkbox" className="w-4 h-4 text-purple-500 rounded" />
                   <span className="ml-2 text-sm text-gray-600">Remember me</span>
                 </label>
-                <a href="#" className="text-sm text-budima-light-blue hover:text-budima-deep-blue transition">
+                <a href="#" className="text-sm text-purple-600 hover:text-purple-700 transition">
                   Forgot password?
                 </a>
               </div>
@@ -157,7 +163,7 @@ export default function Login() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3 bg-gradient-to-r from-budima-deep-blue to-budima-indigo text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-budima-deep-blue/30 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="w-full py-3 bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-600/30 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {loading ? 'Processing...' : isSignUp ? 'Create Account' : 'Sign In'}
               {!loading && <ArrowRight className="w-5 h-5" />}
@@ -194,7 +200,7 @@ export default function Login() {
                     businessName: '',
                   });
                 }}
-                className="text-budima-light-blue font-semibold hover:text-budima-deep-blue transition"
+                className="text-purple-600 font-semibold hover:text-purple-700 transition"
               >
                 {isSignUp ? 'Sign In' : 'Sign Up'}
               </button>
@@ -205,7 +211,7 @@ export default function Login() {
           <div className="mt-6 text-center">
             <Link
               to="/"
-              className="text-sm text-gray-600 hover:text-budima-deep-blue transition inline-flex items-center gap-1"
+              className="text-sm text-gray-600 hover:text-purple-600 transition inline-flex items-center gap-1"
             >
               ← Back to Home
             </Link>

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
+import BudimaLogo from '@/components/BudimaLogo';
 import {
   Sparkles,
   Zap,
@@ -137,13 +138,13 @@ export default function Index() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-budima-light-bg via-white to-blue-50 py-20 sm:py-32">
+      <section className="relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-blue-50 py-20 sm:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-budima-deep-blue leading-tight">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-purple-600 leading-tight">
                   All-in-One AI Digital Marketing Assistant
                 </h1>
                 <p className="text-lg sm:text-xl text-gray-600">
@@ -159,7 +160,7 @@ export default function Index() {
 
               <Link
                 to="/login"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-budima-deep-blue to-budima-indigo text-white rounded-xl font-semibold hover:shadow-xl hover:shadow-budima-deep-blue/30 transition-all duration-300 group"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-xl font-semibold hover:shadow-xl hover:shadow-purple-600/30 transition-all duration-300 group"
               >
                 Get Started Free
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -168,24 +169,24 @@ export default function Index() {
 
             {/* Right Illustration */}
             <div className="relative hidden lg:block">
-              <div className="bg-gradient-to-br from-budima-light-blue/20 to-budima-purple/20 rounded-3xl p-8 border border-budima-light-blue/30 backdrop-blur-sm">
+              <div className="bg-gradient-to-br from-blue-200/30 to-purple-200/30 rounded-3xl p-8 border border-blue-300/30 backdrop-blur-sm">
                 <div className="bg-white rounded-2xl shadow-2xl p-6 space-y-4">
                   <div className="flex items-center justify-between">
                     <div className="w-full">
-                      <div className="h-3 bg-budima-deep-blue/10 rounded-full w-3/4"></div>
+                      <div className="h-3 bg-purple-600/10 rounded-full w-3/4"></div>
                     </div>
-                    <div className="w-8 h-8 bg-budima-light-blue rounded-full"></div>
+                    <div className="w-8 h-8 bg-blue-400 rounded-full"></div>
                   </div>
                   <div className="space-y-3">
                     {[1, 2, 3].map((i) => (
-                      <div key={i} className="h-2 bg-budima-deep-blue/10 rounded-full"></div>
+                      <div key={i} className="h-2 bg-purple-600/10 rounded-full"></div>
                     ))}
                   </div>
                   <div className="grid grid-cols-3 gap-3 mt-6">
                     {[1, 2, 3].map((i) => (
                       <div
                         key={i}
-                        className="h-12 bg-gradient-to-br from-budima-light-blue/10 to-budima-purple/10 rounded-lg"
+                        className="h-12 bg-gradient-to-br from-blue-200/30 to-purple-200/30 rounded-lg"
                       ></div>
                     ))}
                   </div>
@@ -193,15 +194,15 @@ export default function Index() {
               </div>
 
               {/* Floating Elements */}
-              <div className="absolute -top-10 -right-10 w-40 h-40 bg-budima-light-blue/20 rounded-full blur-3xl"></div>
-              <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-budima-purple/20 rounded-full blur-3xl"></div>
+              <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-400/20 rounded-full blur-3xl"></div>
+              <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-purple-400/20 rounded-full blur-3xl"></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Auto-Scrolling Marquee */}
-      <section className="bg-budima-dark-bg text-white py-8 overflow-hidden">
+      <section className="bg-gradient-to-r from-purple-700 via-purple-800 to-purple-700 text-white py-8 overflow-hidden">
         <div className="marquee-container overflow-hidden">
           <div className="marquee-content flex gap-8 animate-scroll whitespace-nowrap">
             {[
@@ -212,7 +213,7 @@ export default function Index() {
             ].map((ad, i) => (
               <div key={i} className="inline-flex items-center gap-4 text-xl font-semibold">
                 <span>{ad}</span>
-                <span className="text-budima-light-blue">•</span>
+                <span className="text-blue-300">•</span>
               </div>
             ))}
             {[
@@ -223,7 +224,7 @@ export default function Index() {
             ].map((ad, i) => (
               <div key={`repeat-${i}`} className="inline-flex items-center gap-4 text-xl font-semibold">
                 <span>{ad}</span>
-                <span className="text-budima-light-blue">•</span>
+                <span className="text-blue-300">•</span>
               </div>
             ))}
           </div>
@@ -234,32 +235,40 @@ export default function Index() {
       <section id="features" className="py-20 sm:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-budima-deep-blue mb-4">
+            <h2 className="text-4xl sm:text-5xl font-bold text-purple-600 mb-4">
               Powerful Features
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-gray-600 mb-8">
               Everything you need to scale your digital marketing
             </p>
+            <Link
+              to="/features"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-purple-100 text-purple-600 rounded-lg font-semibold hover:bg-purple-200 transition"
+            >
+              Explore All Features
+              <ArrowRight className="w-5 h-5" />
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, i) => {
               const Icon = feature.icon;
               return (
-                <div
+                <Link
                   key={i}
-                  className="group p-8 bg-white border border-gray-200 rounded-2xl hover:border-budima-light-blue hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                  to="/features"
+                  className="group p-8 bg-white border border-gray-200 rounded-2xl hover:border-purple-400 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
                 >
                   <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${feature.gradient} p-0.5 mb-4 group-hover:scale-110 transition-transform`}>
                     <div className="w-full h-full bg-white rounded-lg flex items-center justify-center">
                       <Icon className={`w-7 h-7 bg-gradient-to-br ${feature.gradient} bg-clip-text text-transparent`} />
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-budima-deep-blue mb-3">
+                  <h3 className="text-xl font-bold text-purple-600 mb-3">
                     {feature.title}
                   </h3>
                   <p className="text-gray-600">{feature.description}</p>
-                </div>
+                </Link>
               );
             })}
           </div>
@@ -267,10 +276,10 @@ export default function Index() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 sm:py-32 bg-budima-light-bg">
+      <section id="pricing" className="py-20 sm:py-32 bg-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-budima-deep-blue mb-4">
+            <h2 className="text-4xl sm:text-5xl font-bold text-purple-600 mb-4">
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-600">
@@ -284,24 +293,24 @@ export default function Index() {
                 key={i}
                 className={`relative rounded-2xl transition-all duration-300 ${
                   plan.popular
-                    ? 'lg:scale-105 bg-white border-2 border-budima-light-blue shadow-2xl'
-                    : 'bg-white border border-gray-200 hover:border-budima-light-blue hover:shadow-lg'
+                    ? 'lg:scale-105 bg-white border-2 border-purple-500 shadow-2xl'
+                    : 'bg-white border border-gray-200 hover:border-purple-400 hover:shadow-lg'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="inline-block px-4 py-1 bg-gradient-to-r from-budima-deep-blue to-budima-indigo text-white text-sm font-bold rounded-full">
+                    <span className="inline-block px-4 py-1 bg-gradient-to-r from-purple-600 to-purple-700 text-white text-sm font-bold rounded-full">
                       Most Popular
                     </span>
                   </div>
                 )}
 
-                <div className={`p-8 border-b ${plan.popular ? 'border-budima-light-blue/30' : 'border-gray-200'}`}>
-                  <h3 className="text-2xl font-bold text-budima-deep-blue mb-2">
+                <div className={`p-8 border-b ${plan.popular ? 'border-purple-200' : 'border-gray-200'}`}>
+                  <h3 className="text-2xl font-bold text-purple-600 mb-2">
                     {plan.name}
                   </h3>
                   <div className="flex items-baseline gap-2">
-                    <span className="text-4xl font-bold text-budima-deep-blue">
+                    <span className="text-4xl font-bold text-purple-600">
                       {plan.price}
                     </span>
                     <span className="text-gray-600">/month</span>
@@ -311,7 +320,7 @@ export default function Index() {
                 <div className="p-8 space-y-4">
                   {plan.features.map((feature, j) => (
                     <div key={j} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-budima-light-blue flex-shrink-0 mt-0.5" />
+                      <Check className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
                       <span className="text-gray-700">{feature}</span>
                     </div>
                   ))}
@@ -321,8 +330,8 @@ export default function Index() {
                   <button
                     className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-budima-deep-blue to-budima-indigo text-white hover:shadow-lg'
-                        : 'bg-gray-100 text-budima-deep-blue hover:bg-gray-200'
+                        ? 'bg-gradient-to-r from-purple-600 to-purple-700 text-white hover:shadow-lg'
+                        : 'bg-gray-100 text-purple-600 hover:bg-gray-200'
                     }`}
                   >
                     Get Started
@@ -341,7 +350,7 @@ export default function Index() {
             {/* Left Content */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-4xl sm:text-5xl font-bold text-budima-deep-blue mb-4">
+                <h2 className="text-4xl sm:text-5xl font-bold text-purple-600 mb-4">
                   Why BUDIMA AI?
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed">
@@ -363,7 +372,7 @@ export default function Index() {
 
             {/* Right Solutions */}
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-budima-indigo">Our Solutions</h3>
+              <h3 className="text-2xl font-bold text-blue-500">Our Solutions</h3>
 
               <div className="space-y-4">
                 {[
@@ -375,8 +384,8 @@ export default function Index() {
                   'Integrated dashboard',
                   'Direct buyer–seller interaction',
                 ].map((solution, i) => (
-                  <div key={i} className="flex items-start gap-4 p-4 bg-budima-light-bg rounded-xl hover:bg-blue-100 transition-colors">
-                    <div className="w-6 h-6 bg-gradient-to-r from-budima-light-blue to-budima-purple rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div key={i} className="flex items-start gap-4 p-4 bg-purple-50 rounded-xl hover:bg-blue-100 transition-colors">
+                    <div className="w-6 h-6 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <Check className="w-4 h-4 text-white" />
                     </div>
                     <p className="text-gray-800 font-medium">{solution}</p>
@@ -389,12 +398,12 @@ export default function Index() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 sm:py-32 bg-budima-light-bg">
+      <section id="contact" className="py-20 sm:py-32 bg-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div>
-              <h2 className="text-4xl sm:text-5xl font-bold text-budima-deep-blue mb-4">
+              <h2 className="text-4xl sm:text-5xl font-bold text-purple-600 mb-4">
                 Get in Touch
               </h2>
               <p className="text-lg text-gray-600 mb-8">
@@ -403,7 +412,7 @@ export default function Index() {
 
               <form onSubmit={handleContactSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-sm font-semibold text-budima-deep-blue mb-2">
+                  <label className="block text-sm font-semibold text-purple-600 mb-2">
                     Name
                   </label>
                   <input
@@ -411,14 +420,14 @@ export default function Index() {
                     name="name"
                     value={contactForm.name}
                     onChange={handleContactChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-budima-light-blue focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                     placeholder="Your name"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-budima-deep-blue mb-2">
+                  <label className="block text-sm font-semibold text-purple-600 mb-2">
                     Email
                   </label>
                   <input
@@ -426,14 +435,14 @@ export default function Index() {
                     name="email"
                     value={contactForm.email}
                     onChange={handleContactChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-budima-light-blue focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                     placeholder="your@email.com"
                     required
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-budima-deep-blue mb-2">
+                  <label className="block text-sm font-semibold text-purple-600 mb-2">
                     Business Name
                   </label>
                   <input
@@ -441,13 +450,13 @@ export default function Index() {
                     name="business"
                     value={contactForm.business}
                     onChange={handleContactChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-budima-light-blue focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
                     placeholder="Your business name"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-budima-deep-blue mb-2">
+                  <label className="block text-sm font-semibold text-purple-600 mb-2">
                     Message
                   </label>
                   <textarea
@@ -455,7 +464,7 @@ export default function Index() {
                     value={contactForm.message}
                     onChange={handleContactChange}
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-budima-light-blue focus:border-transparent transition-all resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all resize-none"
                     placeholder="Tell us about your needs..."
                     required
                   ></textarea>
@@ -463,7 +472,7 @@ export default function Index() {
 
                 <button
                   type="submit"
-                  className="w-full py-3 bg-gradient-to-r from-budima-deep-blue to-budima-indigo text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
+                  className="w-full py-3 bg-gradient-to-r from-purple-600 to-purple-700 text-white rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
                 >
                   Send Message
                 </button>
@@ -473,44 +482,44 @@ export default function Index() {
             {/* Contact Info */}
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-bold text-budima-deep-blue mb-6">
+                <h3 className="text-2xl font-bold text-purple-600 mb-6">
                   Contact Information
                 </h3>
               </div>
 
               <div className="space-y-6">
-                <div className="flex items-start gap-4 p-6 bg-white rounded-xl border border-gray-200 hover:border-budima-light-blue hover:shadow-lg transition-all">
-                  <div className="w-12 h-12 bg-gradient-to-br from-budima-light-blue to-budima-purple rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-4 p-6 bg-white rounded-xl border border-gray-200 hover:border-purple-400 hover:shadow-lg transition-all">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-budima-deep-blue mb-1">Email</h4>
+                    <h4 className="font-semibold text-purple-600 mb-1">Email</h4>
                     <p className="text-gray-600">hello@budimaai.com</p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-6 bg-white rounded-xl border border-gray-200 hover:border-budima-light-blue hover:shadow-lg transition-all">
-                  <div className="w-12 h-12 bg-gradient-to-br from-budima-light-blue to-budima-purple rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-4 p-6 bg-white rounded-xl border border-gray-200 hover:border-purple-400 hover:shadow-lg transition-all">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-budima-deep-blue mb-1">Phone</h4>
+                    <h4 className="font-semibold text-purple-600 mb-1">Phone</h4>
                     <p className="text-gray-600">+91 (555) 123-4567</p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 p-6 bg-white rounded-xl border border-gray-200 hover:border-budima-light-blue hover:shadow-lg transition-all">
-                  <div className="w-12 h-12 bg-gradient-to-br from-budima-light-blue to-budima-purple rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start gap-4 p-6 bg-white rounded-xl border border-gray-200 hover:border-purple-400 hover:shadow-lg transition-all">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-budima-deep-blue mb-1">Location</h4>
+                    <h4 className="font-semibold text-purple-600 mb-1">Location</h4>
                     <p className="text-gray-600">India</p>
                   </div>
                 </div>
               </div>
 
-              <div className="p-6 bg-gradient-to-br from-budima-deep-blue/10 to-budima-indigo/10 rounded-xl border border-budima-light-blue/30">
+              <div className="p-6 bg-gradient-to-br from-purple-200/30 to-blue-200/30 rounded-xl border border-purple-300/30">
                 <p className="text-gray-700 leading-relaxed">
                   Our team is passionate about helping businesses succeed with AI-powered
                   marketing solutions. We're here to support you every step of the way.
@@ -522,14 +531,12 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-budima-dark-bg text-white py-12 border-t border-gray-800">
+      <footer className="bg-purple-900 text-white py-12 border-t border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-br from-budima-light-blue to-budima-purple rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold">B</span>
-                </div>
+                <BudimaLogo size="small" />
                 <span className="font-bold text-lg">BUDIMA AI</span>
               </div>
               <p className="text-gray-400">All-in-One AI Digital Marketing Assistant</p>
@@ -538,26 +545,26 @@ export default function Index() {
             <div>
               <h4 className="font-semibold mb-4">Product</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-budima-light-blue transition">Features</a></li>
-                <li><a href="#" className="hover:text-budima-light-blue transition">Pricing</a></li>
-                <li><a href="#" className="hover:text-budima-light-blue transition">Security</a></li>
+                <li><a href="#" className="hover:text-blue-300 transition">Features</a></li>
+                <li><a href="#" className="hover:text-blue-300 transition">Pricing</a></li>
+                <li><a href="#" className="hover:text-blue-300 transition">Security</a></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-semibold mb-4">Company</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-budima-light-blue transition">About</a></li>
-                <li><a href="#" className="hover:text-budima-light-blue transition">Blog</a></li>
-                <li><a href="#" className="hover:text-budima-light-blue transition">Contact</a></li>
+                <li><a href="#" className="hover:text-blue-300 transition">About</a></li>
+                <li><a href="#" className="hover:text-blue-300 transition">Blog</a></li>
+                <li><a href="#" className="hover:text-blue-300 transition">Contact</a></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-semibold mb-4">Legal</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-budima-light-blue transition">Privacy</a></li>
-                <li><a href="#" className="hover:text-budima-light-blue transition">Terms</a></li>
+                <li><a href="#" className="hover:text-blue-300 transition">Privacy</a></li>
+                <li><a href="#" className="hover:text-blue-300 transition">Terms</a></li>
               </ul>
             </div>
           </div>
